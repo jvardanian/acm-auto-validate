@@ -46,7 +46,7 @@ const sourceStack = new Stack(app, 'SourceStack', {
 
 // Deploy the ACM validation construct in the source account stack
 new ACMValidationConstruct(sourceStack, 'ACMValidationConstruct', {
-  environment: 'prod',
+  rolePrefix: 'prod',
   zoneAccountId: 'zone-account-id',
   zoneName: 'example.com',
 });
@@ -58,7 +58,7 @@ const zoneStack = new Stack(app, 'ZoneStack', {
 
 // Deploy the DNS validation role construct in the zone account stack
 new DnsValidationRoleConstruct(zoneStack, 'DnsValidationRoleConstruct', {
-  environment: 'prod',
+  rolePrefix: 'prod',
   sourceAcctId: 'source-account-id',
   zoneAcctId: 'zone-account-id',
 });
@@ -66,8 +66,8 @@ new DnsValidationRoleConstruct(zoneStack, 'DnsValidationRoleConstruct', {
 
 ## Configuration
 
-- `ACMValidationConstruct`: Deploys the Lambda function (written in Python) and EventBridge rule in the source account. Requires an environment identifier (such as 'dev' or 'prod'; this is used for naming resources), the zone account ID and the zone name.
-- `DnsValidationRoleConstruct`: Deploys the IAM role in the zone account, which the Lambda function assumes. Requires an environment identifier (such as 'dev' or 'prod'; this is used for naming resources), the source account ID, and the zone account ID.
+- `ACMValidationConstruct`: Deploys the Lambda function (written in Python) and EventBridge rule in the source account. Requires a rolePrefix (such as 'dev' or 'prod'; this is used for naming resources), the zone account ID and the zone name.
+- `DnsValidationRoleConstruct`: Deploys the IAM role in the zone account, which the Lambda function assumes. Requires a rolePrefix (such as 'dev' or 'prod'; this is used for naming resources), the source account ID, and the zone account ID.
 
 ## Contributing
 

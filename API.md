@@ -216,16 +216,16 @@ const aCMValidationConstructProps: ACMValidationConstructProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#acm-auto-validate.ACMValidationConstructProps.property.environment">environment</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#acm-auto-validate.ACMValidationConstructProps.property.rolePrefix">rolePrefix</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#acm-auto-validate.ACMValidationConstructProps.property.zoneAccountId">zoneAccountId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#acm-auto-validate.ACMValidationConstructProps.property.zoneName">zoneName</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `environment`<sup>Required</sup> <a name="environment" id="acm-auto-validate.ACMValidationConstructProps.property.environment"></a>
+##### `rolePrefix`<sup>Required</sup> <a name="rolePrefix" id="acm-auto-validate.ACMValidationConstructProps.property.rolePrefix"></a>
 
 ```typescript
-public readonly environment: string;
+public readonly rolePrefix: string;
 ```
 
 - *Type:* string
@@ -266,16 +266,16 @@ const dnsValidationRoleConstructProps: DnsValidationRoleConstructProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#acm-auto-validate.DnsValidationRoleConstructProps.property.environment">environment</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#acm-auto-validate.DnsValidationRoleConstructProps.property.rolePrefix">rolePrefix</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#acm-auto-validate.DnsValidationRoleConstructProps.property.sourceAcctId">sourceAcctId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#acm-auto-validate.DnsValidationRoleConstructProps.property.zoneAcctId">zoneAcctId</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `environment`<sup>Required</sup> <a name="environment" id="acm-auto-validate.DnsValidationRoleConstructProps.property.environment"></a>
+##### `rolePrefix`<sup>Required</sup> <a name="rolePrefix" id="acm-auto-validate.DnsValidationRoleConstructProps.property.rolePrefix"></a>
 
 ```typescript
-public readonly environment: string;
+public readonly rolePrefix: string;
 ```
 
 - *Type:* string

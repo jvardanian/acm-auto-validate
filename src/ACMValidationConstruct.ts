@@ -8,7 +8,7 @@ import * as logs from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 
 export interface ACMValidationConstructProps {
-  readonly environment: string;
+  readonly rolePrefix: string;
   readonly zoneAccountId: string;
   readonly zoneName: string;
 }
@@ -17,7 +17,7 @@ export class ACMValidationConstruct extends Construct {
   constructor(scope: Construct, id: string, props: ACMValidationConstructProps) {
     super(scope, id);
 
-    const roleArn = `arn:aws:iam::${props.zoneAccountId}:role/${props.environment}-dns-validation-role`;
+    const roleArn = `arn:aws:iam::${props.zoneAccountId}:role/${props.rolePrefix}-dns-validation-role`;
     const resourcePrefix = props.zoneName.replace(/\./g, '-');
 
     const certLambdaRole = new iam.Role(this, `${resourcePrefix}-dns-lambda-execution-role`, {

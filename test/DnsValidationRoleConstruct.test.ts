@@ -9,7 +9,7 @@ test('DnsValidationRoleConstruct creates an IAM Role', () => {
   });
 
   new DnsValidationRoleConstruct(stack, 'MyDnsValidationRole', {
-    environment: 'prod',
+    rolePrefix: 'prod',
     sourceAcctId: '123456789012',
     zoneAcctId: '123456789012',
   });

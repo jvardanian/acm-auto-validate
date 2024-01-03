@@ -2,7 +2,7 @@ import * as iam from 'aws-cdk-lib/aws-iam';
 import { Construct } from 'constructs';
 
 export interface DnsValidationRoleConstructProps {
-  readonly environment: string;
+  readonly rolePrefix: string;
   readonly sourceAcctId: string;
   readonly zoneAcctId: string;
 }
@@ -16,8 +16,8 @@ export class DnsValidationRoleConstruct extends Construct {
     ];
 
     // Create IAM role used for DNS validation lambda
-    new iam.Role(this, `${props.environment}-dns-validation-role`, {
-      roleName: `${props.environment}-dns-validation-role`,
+    new iam.Role(this, `${props.rolePrefix}-dns-validation-role`, {
+      roleName: `${props.rolePrefix}-dns-validation-role`,
       assumedBy: new iam.AccountPrincipal(props.sourceAcctId),
       description: 'Lambda role for DNS validation of ACM certificates',
       inlinePolicies: {

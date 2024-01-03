@@ -9,7 +9,7 @@ test('ACMValidationConstruct creates necessary resources', () => {
   });
 
   new ACMValidationConstruct(stack, 'MyTestACMValidationConstruct', {
-    environment: 'prod',
+    rolePrefix: 'prod',
     zoneAccountId: '123456789012',
     zoneName: 'example.com',
   });
