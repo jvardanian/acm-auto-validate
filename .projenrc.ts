@@ -1,7 +1,7 @@
 import { awscdk } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'John Vardanian',
-  authorAddress: 'name@example.com',
+  authorAddress: 'jvardanian@users.noreply.github.com',
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
   jsiiVersion: '~5.0.0',
