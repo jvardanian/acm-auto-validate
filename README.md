@@ -66,7 +66,7 @@ new DnsValidationRoleConstruct(zoneStack, 'DnsValidationRoleConstruct', {
 
 ## Configuration
 
-- `ACMValidationConstruct`: Deploys the Lambda function (written in Python) and EventBridge rule in the source account. Requires the zone account ID and the zone name.
+- `ACMValidationConstruct`: Deploys the Lambda function (written in Python) and EventBridge rule in the source account. Requires an environment identifier (such as 'dev' or 'prod'), the zone account ID and the zone name.
 - `DnsValidationRoleConstruct`: Deploys the IAM role in the zone account, which the Lambda function assumes. Requires an environment identifier (such as 'dev' or 'prod'), the source account ID, and the zone account ID.
 
 ## Contributing
@@ -75,4 +75,4 @@ Contributions to this project are welcome. Please follow the standard procedures
 
 ## License
 
-This project is distributed under the [MIT License](LICENSE).
+This project is distributed under the [Apache License 2.0](LICENSE).

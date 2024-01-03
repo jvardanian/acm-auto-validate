@@ -9,7 +9,11 @@ const project = new awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
   repositoryUrl: 'https://github.com/jvardanian/acm-auto-validate.git',
   description: 'AWS CDK construct for automated cross-account ACM certificate validation using DNS',
-  keywords: ['awscdk', 'acm', 'certificate'],
+  keywords: ['awscdk', 'ACM', 'certificate', 'EventBridge', 'Lambda', 'Route53', 'SSM', 'CICD'],
+  publishToPypi: {
+    distName: 'acm-auto-validate',
+    module: 'acm_auto_validate',
+  },
   devDeps: [
     'jest',
     '@types/jest',
