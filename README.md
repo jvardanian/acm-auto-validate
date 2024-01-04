@@ -13,7 +13,7 @@ This construct was initially created to support CDK-based deployment pipelines w
 - **Automated DNS Validation**: Automates the creation and deletion of DNS records for ACM certificate validation.
 - **Cross-Account Support**: Capable of handling DNS records in a hosted zone that is in a different AWS account.
 - **Event-Driven**: Utilizes AWS Lambda and Amazon EventBridge to respond to certificate request events.
-- **SSM Parameter Tracking**: Tracks the certificates processed using AWS Systems Manager Parameter Store. Note that SSM parameters are created in the `us-east-1` region, but certificates can be issued in any region.
+- **SSM Parameter Tracking**: Tracks the certificates processed using AWS Systems Manager Parameter Store. Note that SSM parameters are created in the `us-east-1` region, but this construct can be deployed to any region that supports ACM, Lambda, and EventBridge.
 
 ## Prerequisites
 
@@ -27,6 +27,11 @@ To use this construct, install it from npm:
 
 ```bash
 npm install acm-auto-validate
+```
+
+Python installation:
+```bash
+pip install acm-auto-validate
 ```
 
 ## Usage
